@@ -170,4 +170,4 @@ def check_virustotal_url(url, api_key, timeout=10):
         return None
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
