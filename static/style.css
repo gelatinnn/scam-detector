@@ -1,0 +1,111 @@
+:root{
+    --accent-a:#7c3aed;
+    --accent-b:#06b6d4;
+    --bg-img: url("https://wallpapers.com/images/hd/microsoft-teams-blur-background-1500-x-1125-ifkaqckxjtyvkq0w.jpg");
+    --card-bg: rgba(255,255,255,0.04);
+    --muted: rgba(230,238,246,0.7);
+    --text: #e6eef6;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-img) center/cover no-repeat fixed;
+    color:var(--text);
+    text-align:center;
+    padding-top:120px; /* space for fixed header */
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+    width:86%;
+    max-width:760px;
+    margin:40px auto 80px auto;
+    padding:28px;
+    border-radius:14px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 20px 40px rgba(2,6,23,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.full-header{
+    position:fixed;
+    top:20px;
+    left:20px;
+    right:auto;
+    width:auto;
+    display:flex;
+    justify-content:flex-start;
+    z-index:1500;
+}
+
+.site-header{ width:auto; max-width:380px }
+
+.site-header .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:14px;
+    padding:12px 18px;
+    border-radius:12px;
+    background: linear-gradient(90deg, rgba(10,12,18,0.78), rgba(20,26,36,0.6));
+    box-shadow:0 12px 36px rgba(2,6,23,0.28);
+    border:1px solid rgba(255,255,255,0.04);
+    text-align:left;
+}
+
+.header-wrap{
+    max-width:380px;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:12px;
+    padding:8px 12px;
+}
+
+.header-left,
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+/* Header nav and buttons */
+.nav-link{ color:var(--muted); margin:0 10px; font-weight:600; padding:6px 10px; text-decoration:none; border-radius:8px; transition: all .14s ease }
+.nav-link:hover{ color:var(--text); background: rgba(255,255,255,0.03); transform:translateY(-2px) }
+.small-btn{ padding:8px 12px; border-radius:10px; background: linear-gradient(90deg,var(--accent-a),var(--accent-b)); color:#fff; border:none; font-weight:700; box-shadow: 0 6px 18px rgba(13,17,23,0.35) }
+.small-btn:hover{ transform:translateY(-2px); box-shadow: 0 10px 28px rgba(13,17,23,0.45) }
+
+.header-wrap{ max-width:380px; margin:0; display:flex; align-items:center; justify-content:flex-end; gap:12px; padding:8px 12px }
+.header-left{ display:flex; align-items:center; gap:12px }
+.logo{ display:inline-flex; align-items:center; gap:8px }
+.header-center{ flex:1 }
+.header-right{ display:flex; align-items:center; gap:12px }
+.status-badge{ padding:6px 10px; border-radius:999px; font-weight:700; font-size:13px }
+.status-ready{ background:#ecfdf5; color:#065f46; border:1px solid #bbf7d0 }
+
+@media (min-width:800px){ body{ padding-top:120px } }
+
+.container:hover{ transform: translateY(-8px) translateZ(12px) scale(1.01); box-shadow: 0 22px 46px rgba(0,0,0,0.36) }
+
+ul{ list-style:none; padding:0; margin:0 }
+
+textarea{ width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); background: rgba(10,12,16,0.28); color:var(--text); min-height:120px; resize:vertical }
+textarea::placeholder{ color:rgba(230,238,246,0.55) }
+textarea:focus{ outline:none; box-shadow: 0 8px 30px rgba(13,17,23,0.45); border-color: rgba(255,255,255,0.12); transform: translateY(-2px) }
+
+button{ padding:10px 26px; background: linear-gradient(90deg,var(--accent-a),var(--accent-b)); color:#fff; border:none; border-radius:10px; cursor:pointer; font-weight:700; box-shadow:0 10px 30px rgba(13,17,23,0.36); transition: transform .12s ease, box-shadow .12s ease }
+button:hover{ transform: translateY(-3px); box-shadow: 0 16px 44px rgba(13,17,23,0.44) }
+
+.result{ display:flex; align-items:center; justify-content:center; gap:12px; margin-top:18px }
+.result-text{ margin:0; font-size:20px }
+.result-safe .result-text{ color:#16a34a }
+.result-warning .result-text{ color:#b45309 }
+
+/* Accessible visually-hidden helper */
+.sr-only{ position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important }
+
+.container h1{ margin:6px 0 6px 0; font-size:22px; color:var(--text); font-weight:800 }
+.container p{ color:var(--muted); margin-bottom:14px }
+

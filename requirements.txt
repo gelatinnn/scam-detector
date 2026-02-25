@@ -1,0 +1,10 @@
+flask
+gunicorn
+pillow
+pytesseract
+requests
+pandas
+scikit-learn
+tldextract
+joblib
+openpyxl
